@@ -28,6 +28,13 @@ if(PROJECT_SOURCE_DIR STREQUAL PROJECT_BINARY_DIR)
   )
 endif()
 
+
+find_package(CUDA REQUIRED)
+enable_language(CUDA)
+include(CheckLanguage)
+check_language(CUDA)
+
+
 add_subdirectory(Modules)
 add_subdirectory(Apps)
 add_subdirectory(Tests)
